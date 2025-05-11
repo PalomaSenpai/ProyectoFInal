@@ -1,10 +1,10 @@
-
+'use client';
 import React, { useState } from 'react';
 import styles from './Navbar.module.css';
 import Link from 'next/link';
 
 const Navbar = () => {
-  const [activeMenu, setActiveMenu] = useState('dashboard');
+  const [activeMenu, setActiveMenu] = useState('widgets'); // Widgets activo por defecto como en la imagen
   const [collapsedMenus, setCollapsedMenus] = useState({
     dashboard: false,
     base: false,
@@ -13,38 +13,33 @@ const Navbar = () => {
     tables: false,
     maps: false,
     charts: false,
-    submenu: false
+    submenu: false,
+    subnav1: false,
+    subnav2: false,
   });
 
   const toggleMenu = (menu) => {
-    setCollapsedMenus(prev => ({
+    setCollapsedMenus((prev) => ({
       ...prev,
-      [menu]: !prev[menu]
+      [menu]: !prev[menu],
     }));
   };
 
   return (
-    <div className={`${styles.sidebar} ${styles['data-background-color']}`}>
-      <div className={styles['sidebar-logo']}>
-        <div className={`${styles['logo-header']} ${styles['data-background-color']}`}>
-          <Link href="/" className={styles.logo}>
-            <img
-              src="/assets/img/kaiadmin/logo_light.svg"
-              alt="navbar brand"
-              className={styles['navbar-brand']}
-              height="20"
-            />
-          </Link>
-          <div className={styles['nav-toggle']}>
-            <button className={`${styles.btn} ${styles['btn-toggle']} ${styles['toggle-sidebar']}`}>
-              <i className="gg-menu-right"></i>
-            </button>
-            <button className={`${styles.btn} ${styles['btn-toggle']} ${styles['sidenav-toggler']}`}>
-              <i className="gg-menu-left"></i>
-            </button>
-          </div>
-          <button className={`${styles.topbarToggler} ${styles.more}`}>
-            <i className="gg-more-vertical-alt"></i>
+    <div className={styles.sidebar} data-background-color="dark">
+      <div className={styles['logo-header']}>
+        <Link href="/" className={styles.logo}>
+          <img
+            src="/assets/img/kaiadmin/logo_light.svg"
+            alt="navbar brand"
+            className={styles['navbar-brand']}
+            height="20"
+          />
+          <span>kaiadmin</span> {/* Texto "kaiadmin" como en la imagen */}
+        </Link>
+        <div className={styles['nav-toggle']}>
+          <button className={styles['btn-toggle']}>
+            <i className="fas fa-bars"></i> {/* Ícono de Font Awesome */}
           </button>
         </div>
       </div>
@@ -54,19 +49,15 @@ const Navbar = () => {
           <ul className={`${styles.nav} ${styles['nav-secondary']}`}>
             {/* Dashboard */}
             <li className={`${styles['nav-item']} ${activeMenu === 'dashboard' ? styles.active : ''}`}>
-              <a
-                onClick={() => toggleMenu('dashboard')}
-                className={collapsedMenus.dashboard ? '' : styles.collapsed}
-                aria-expanded={!collapsedMenus.dashboard}
-              >
+              <a onClick={() => toggleMenu('dashboard')} aria-expanded={collapsedMenus.dashboard}>
                 <i className="fas fa-home"></i>
                 <p>Dashboard</p>
                 <span className={styles.caret}></span>
               </a>
-              <div className={`${styles.collapse} ${collapsedMenus.dashboard ? styles.show : ''}`} id="dashboard">
+              <div className={`${styles.collapse} ${collapsedMenus.dashboard ? styles.show : ''}`}>
                 <ul className={`${styles.nav} ${styles['nav-collapse']}`}>
                   <li>
-                    <Link href="/dashboard">
+                    <Link href="#" onClick={() => setActiveMenu('dashboard')}>
                       <span className={styles['sub-item']}>Dashboard 1</span>
                     </Link>
                   </li>
@@ -77,7 +68,7 @@ const Navbar = () => {
             {/* Components Section */}
             <li className={styles['nav-section']}>
               <span className={styles['sidebar-mini-icon']}>
-                <i className="fa fa-ellipsis-h"></i>
+                <i className="fas fa-ellipsis-h"></i>
               </span>
               <h4 className={styles['text-section']}>Components</h4>
             </li>
@@ -89,50 +80,50 @@ const Navbar = () => {
                 <p>Base</p>
                 <span className={styles.caret}></span>
               </a>
-              <div className={`${styles.collapse} ${collapsedMenus.base ? styles.show : ''}`} id="base">
+              <div className={`${styles.collapse} ${collapsedMenus.base ? styles.show : ''}`}>
                 <ul className={`${styles.nav} ${styles['nav-collapse']}`}>
                   <li>
-                    <Link href="/components/avatars">
+                    <Link href="#" onClick={() => setActiveMenu('base')}>
                       <span className={styles['sub-item']}>Avatars</span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/components/buttons">
+                    <Link href="#" onClick={() => setActiveMenu('base')}>
                       <span className={styles['sub-item']}>Buttons</span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/components/gridsystem">
+                    <Link href="#" onClick={() => setActiveMenu('base')}>
                       <span className={styles['sub-item']}>Grid System</span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/components/panels">
+                    <Link href="#" onClick={() => setActiveMenu('base')}>
                       <span className={styles['sub-item']}>Panels</span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/components/notifications">
+                    <Link href="#" onClick={() => setActiveMenu('base')}>
                       <span className={styles['sub-item']}>Notifications</span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/components/sweetalert">
+                    <Link href="#" onClick={() => setActiveMenu('base')}>
                       <span className={styles['sub-item']}>Sweet Alert</span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/components/font-awesome-icons">
+                    <Link href="#" onClick={() => setActiveMenu('base')}>
                       <span className={styles['sub-item']}>Font Awesome Icons</span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/components/simple-line-icons">
+                    <Link href="#" onClick={() => setActiveMenu('base')}>
                       <span className={styles['sub-item']}>Simple Line Icons</span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/components/typography">
+                    <Link href="#" onClick={() => setActiveMenu('base')}>
                       <span className={styles['sub-item']}>Typography</span>
                     </Link>
                   </li>
@@ -147,15 +138,15 @@ const Navbar = () => {
                 <p>Sidebar Layouts</p>
                 <span className={styles.caret}></span>
               </a>
-              <div className={`${styles.collapse} ${collapsedMenus.sidebarLayouts ? styles.show : ''}`} id="sidebarLayouts">
+              <div className={`${styles.collapse} ${collapsedMenus.sidebarLayouts ? styles.show : ''}`}>
                 <ul className={`${styles.nav} ${styles['nav-collapse']}`}>
                   <li>
-                    <Link href="/sidebar-style-2">
+                    <Link href="#" onClick={() => setActiveMenu('sidebarLayouts')}>
                       <span className={styles['sub-item']}>Sidebar Style 2</span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/icon-menu">
+                    <Link href="#" onClick={() => setActiveMenu('sidebarLayouts')}>
                       <span className={styles['sub-item']}>Icon Menu</span>
                     </Link>
                   </li>
@@ -170,10 +161,10 @@ const Navbar = () => {
                 <p>Forms</p>
                 <span className={styles.caret}></span>
               </a>
-              <div className={`${styles.collapse} ${collapsedMenus.forms ? styles.show : ''}`} id="forms">
+              <div className={`${styles.collapse} ${collapsedMenus.forms ? styles.show : ''}`}>
                 <ul className={`${styles.nav} ${styles['nav-collapse']}`}>
                   <li>
-                    <Link href="/forms/forms">
+                    <Link href="#" onClick={() => setActiveMenu('forms')}>
                       <span className={styles['sub-item']}>Basic Form</span>
                     </Link>
                   </li>
@@ -188,15 +179,15 @@ const Navbar = () => {
                 <p>Tables</p>
                 <span className={styles.caret}></span>
               </a>
-              <div className={`${styles.collapse} ${collapsedMenus.tables ? styles.show : ''}`} id="tables">
+              <div className={`${styles.collapse} ${collapsedMenus.tables ? styles.show : ''}`}>
                 <ul className={`${styles.nav} ${styles['nav-collapse']}`}>
                   <li>
-                    <Link href="/tables/tables">
+                    <Link href="#" onClick={() => setActiveMenu('tables')}>
                       <span className={styles['sub-item']}>Basic Table</span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/tables/datatables">
+                    <Link href="#" onClick={() => setActiveMenu('tables')}>
                       <span className={styles['sub-item']}>Datatables</span>
                     </Link>
                   </li>
@@ -211,15 +202,15 @@ const Navbar = () => {
                 <p>Maps</p>
                 <span className={styles.caret}></span>
               </a>
-              <div className={`${styles.collapse} ${collapsedMenus.maps ? styles.show : ''}`} id="maps">
+              <div className={`${styles.collapse} ${collapsedMenus.maps ? styles.show : ''}`}>
                 <ul className={`${styles.nav} ${styles['nav-collapse']}`}>
                   <li>
-                    <Link href="/maps/googlemaps">
+                    <Link href="#" onClick={() => setActiveMenu('maps')}>
                       <span className={styles['sub-item']}>Google Maps</span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/maps/jsvectormap">
+                    <Link href="#" onClick={() => setActiveMenu('maps')}>
                       <span className={styles['sub-item']}>Jsvectormap</span>
                     </Link>
                   </li>
@@ -234,15 +225,15 @@ const Navbar = () => {
                 <p>Charts</p>
                 <span className={styles.caret}></span>
               </a>
-              <div className={`${styles.collapse} ${collapsedMenus.charts ? styles.show : ''}`} id="charts">
+              <div className={`${styles.collapse} ${collapsedMenus.charts ? styles.show : ''}`}>
                 <ul className={`${styles.nav} ${styles['nav-collapse']}`}>
                   <li>
-                    <Link href="/charts/charts">
+                    <Link href="#" onClick={() => setActiveMenu('charts')}>
                       <span className={styles['sub-item']}>Chart Js</span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/charts/sparkline">
+                    <Link href="#" onClick={() => setActiveMenu('charts')}>
                       <span className={styles['sub-item']}>Sparkline</span>
                     </Link>
                   </li>
@@ -251,8 +242,8 @@ const Navbar = () => {
             </li>
 
             {/* Widgets */}
-            <li className={styles['nav-item']}>
-              <Link href="/widgets">
+            <li className={`${styles['nav-item']} ${activeMenu === 'widgets' ? styles.active : ''}`}>
+              <Link href="#" onClick={() => setActiveMenu('widgets')}>
                 <i className="fas fa-desktop"></i>
                 <p>Widgets</p>
                 <span className={`${styles.badge} ${styles['badge-success']}`}>4</span>
@@ -260,8 +251,8 @@ const Navbar = () => {
             </li>
 
             {/* Documentation */}
-            <li className={styles['nav-item']}>
-              <Link href="/documentation">
+            <li className={`${styles['nav-item']} ${activeMenu === 'documentation' ? styles.active : ''}`}>
+              <Link href="#" onClick={() => setActiveMenu('documentation')}>
                 <i className="fas fa-file"></i>
                 <p>Documentation</p>
                 <span className={`${styles.badge} ${styles['badge-secondary']}`}>1</span>
@@ -275,22 +266,22 @@ const Navbar = () => {
                 <p>Menu Levels</p>
                 <span className={styles.caret}></span>
               </a>
-              <div className={`${styles.collapse} ${collapsedMenus.submenu ? styles.show : ''}`} id="submenu">
+              <div className={`${styles.collapse} ${collapsedMenus.submenu ? styles.show : ''}`}>
                 <ul className={`${styles.nav} ${styles['nav-collapse']}`}>
                   <li>
                     <a onClick={() => toggleMenu('subnav1')}>
                       <span className={styles['sub-item']}>Level 1</span>
                       <span className={styles.caret}></span>
                     </a>
-                    <div className={`${styles.collapse} ${collapsedMenus.subnav1 ? styles.show : ''}`} id="subnav1">
+                    <div className={`${styles.collapse} ${collapsedMenus.subnav1 ? styles.show : ''}`}>
                       <ul className={`${styles.nav} ${styles['nav-collapse']} ${styles.subnav}`}>
                         <li>
-                          <a href="#">
+                          <a href="#" onClick={() => setActiveMenu('submenu')}>
                             <span className={styles['sub-item']}>Level 2</span>
                           </a>
                         </li>
                         <li>
-                          <a href="#">
+                          <a href="#" onClick={() => setActiveMenu('submenu')}>
                             <span className={styles['sub-item']}>Level 2</span>
                           </a>
                         </li>
@@ -302,10 +293,10 @@ const Navbar = () => {
                       <span className={styles['sub-item']}>Level 1</span>
                       <span className={styles.caret}></span>
                     </a>
-                    <div className={`${styles.collapse} ${collapsedMenus.subnav2 ? styles.show : ''}`} id="subnav2">
+                    <div className={`${styles.collapse} ${collapsedMenus.subnav2 ? styles.show : ''}`}>
                       <ul className={`${styles.nav} ${styles['nav-collapse']} ${styles.subnav}`}>
                         <li>
-                          <a href="#">
+                          <a href="#" onClick={() => setActiveMenu('submenu')}>
                             <span className={styles['sub-item']}>Level 2</span>
                           </a>
                         </li>
@@ -313,7 +304,7 @@ const Navbar = () => {
                     </div>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="#" onClick={() => setActiveMenu('submenu')}>
                       <span className={styles['sub-item']}>Level 1</span>
                     </a>
                   </li>
