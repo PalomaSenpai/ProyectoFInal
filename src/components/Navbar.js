@@ -35,11 +35,11 @@ const Navbar = () => {
             className={styles['navbar-brand']}
             height="20"
           />
-          <span>kaiadmin</span> {/* Texto "kaiadmin" como en la imagen */}
+          <span>kaiadmin</span>
         </Link>
         <div className={styles['nav-toggle']}>
           <button className={styles['btn-toggle']}>
-            <i className="fas fa-bars"></i> {/* Ícono de Font Awesome */}
+            <i className="fas fa-bars"></i>
           </button>
         </div>
       </div>
@@ -50,7 +50,7 @@ const Navbar = () => {
             {/* Dashboard */}
             <li className={`${styles['nav-item']} ${activeMenu === 'dashboard' ? styles.active : ''}`}>
               <a onClick={() => toggleMenu('dashboard')} aria-expanded={collapsedMenus.dashboard}>
-                <i className="fas fa-home"></i>
+                <i className="fas fa-tachometer-alt"></i> {/* Ícono ajustado */}
                 <p>Dashboard</p>
                 <span className={styles.caret}></span>
               </a>
@@ -76,7 +76,7 @@ const Navbar = () => {
             {/* Base */}
             <li className={`${styles['nav-item']} ${activeMenu === 'base' ? styles.active : ''}`}>
               <a onClick={() => toggleMenu('base')}>
-                <i className="fas fa-layer-group"></i>
+                <i className="fas fa-cubes"></i> {/* Ícono ajustado */}
                 <p>Base</p>
                 <span className={styles.caret}></span>
               </a>
@@ -134,7 +134,7 @@ const Navbar = () => {
             {/* Sidebar Layouts */}
             <li className={`${styles['nav-item']} ${activeMenu === 'sidebarLayouts' ? styles.active : ''}`}>
               <a onClick={() => toggleMenu('sidebarLayouts')}>
-                <i className="fas fa-th-list"></i>
+                <i className="fas fa-th-large"></i> {/* Ícono ajustado */}
                 <p>Sidebar Layouts</p>
                 <span className={styles.caret}></span>
               </a>
@@ -157,7 +157,7 @@ const Navbar = () => {
             {/* Forms */}
             <li className={`${styles['nav-item']} ${activeMenu === 'forms' ? styles.active : ''}`}>
               <a onClick={() => toggleMenu('forms')}>
-                <i className="fas fa-pen-square"></i>
+                <i className="fas fa-edit"></i> {/* Ícono ajustado */}
                 <p>Forms</p>
                 <span className={styles.caret}></span>
               </a>
@@ -198,7 +198,7 @@ const Navbar = () => {
             {/* Maps */}
             <li className={`${styles['nav-item']} ${activeMenu === 'maps' ? styles.active : ''}`}>
               <a onClick={() => toggleMenu('maps')}>
-                <i className="fas fa-map-marker-alt"></i>
+                <i className="fas fa-map"></i> {/* Ícono ajustado */}
                 <p>Maps</p>
                 <span className={styles.caret}></span>
               </a>
@@ -221,7 +221,7 @@ const Navbar = () => {
             {/* Charts */}
             <li className={`${styles['nav-item']} ${activeMenu === 'charts' ? styles.active : ''}`}>
               <a onClick={() => toggleMenu('charts')}>
-                <i className="far fa-chart-bar"></i>
+                <i className="fas fa-chart-pie"></i> {/* Ícono ajustado */}
                 <p>Charts</p>
                 <span className={styles.caret}></span>
               </a>
@@ -244,7 +244,7 @@ const Navbar = () => {
             {/* Widgets */}
             <li className={`${styles['nav-item']} ${activeMenu === 'widgets' ? styles.active : ''}`}>
               <Link href="#" onClick={() => setActiveMenu('widgets')}>
-                <i className="fas fa-desktop"></i>
+                <i className="fas fa-th"></i> {/* Ícono ajustado */}
                 <p>Widgets</p>
                 <span className={`${styles.badge} ${styles['badge-success']}`}>4</span>
               </Link>
@@ -253,7 +253,7 @@ const Navbar = () => {
             {/* Documentation */}
             <li className={`${styles['nav-item']} ${activeMenu === 'documentation' ? styles.active : ''}`}>
               <Link href="#" onClick={() => setActiveMenu('documentation')}>
-                <i className="fas fa-file"></i>
+                <i className="fas fa-book"></i> {/* Ícono ajustado */}
                 <p>Documentation</p>
                 <span className={`${styles.badge} ${styles['badge-secondary']}`}>1</span>
               </Link>
@@ -262,7 +262,7 @@ const Navbar = () => {
             {/* Menu Levels */}
             <li className={`${styles['nav-item']} ${activeMenu === 'submenu' ? styles.active : ''}`}>
               <a onClick={() => toggleMenu('submenu')}>
-                <i className="fas fa-bars"></i>
+                <i className="fas fa-stream"></i> {/* Ícono ajustado */}
                 <p>Menu Levels</p>
                 <span className={styles.caret}></span>
               </a>
