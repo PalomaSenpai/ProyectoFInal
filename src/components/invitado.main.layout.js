@@ -1,6 +1,8 @@
 
 import '@/styles/css_sattre/core.min.css';
 import '@/styles/css_sattre/skin-travel-agency.css';
+import '@/styles/css_sattre/skin-design-agency.css';
+import '@/styles/custom.css';
 import Head from "next/head";
 import Script from 'next/script';
 export default function Layout({ children }) {

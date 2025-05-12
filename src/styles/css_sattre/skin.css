@@ -153,7 +153,7 @@ h6{
 	line-height: 1.2;
 }
 .title-medium{
-	font-size: 2.476rem
+	font-size: 2.476rem;
 	line-height: 1.2;
 }
 .title-small{
@@ -1467,19 +1467,19 @@ body,
 	height: 15rem;
 }
 .intro-title-2{
-	background-image: url(../images/slider/slide-2-page-intro.jpg);	
+	background-image: url('/images/chocoport/fqa_top.png');	
 }
 .intro-title-2-1{
-	background-image: url(../images/slider/slide-8-page-intro.jpg);	
+	background-image: url('/images/slider/slide-8-page-intro.jpg');	
 }
 .intro-title-2-2{
-	background-image: url(../images/slider/slide-9-page-intro.jpg);	
+	background-image: url('/images/slider/slide-9-page-intro.jpg');	
 }
 .intro-title-2-3{
-	background-image: url(../images/slider/slide-11-page-intro.jpg);	
+	background-image: url('/images/slider/slide-11-page-intro.jpg');	
 }
 .intro-title-2-4{
-	background-image: url(../images/slider/slide-13-page-intro.jpg);	
+	background-image: url('/images/slider/slide-13-page-intro.jpg');	
 }
 @media only screen and (max-width: 768px){
 	[class*="intro-title-"],
@@ -1853,27 +1853,27 @@ body,
 
 /* Stats */
 .stats-1-1{
-	background-image: url(../images/generic/hero-1.jpg);
+	background-image: url('/images/generic/hero-1.jpg');
 }
 
 /* Hero */
 .hero-5-1 .media-column{
-	background-image: url(../images/generic/hero-half-1.jpg);
+	background-image: url('/images/generic/hero-half-1.jpg');
 }
 .hero-5-2 .media-column{
-	background-image: url(../images/team/hero-half-2.jpg);
+	background-image: url('/images/team/hero-half-2.jpg');
 }
 
 /* Call to Action */
 .call-to-action-2-1{
-	background-image: url(../images/generic/call-to-action-1.jpg);
+	background-image: url('/images/generic/call-to-action-1.jpg');
 	background-size: cover;
 	background-position: center;
 }
 
 /* Signup 2 */
 .signup-2-1{
-	background-image: url(../images/generic/signup-1.jpg);
+	background-image: url('/images/generic/signup-1.jpg');
 }
 
 /* Fullscreen Section */
@@ -1886,13 +1886,13 @@ body,
 	overflow: visible;
 }
 .fullscreen-bkg-2{
-	background-image: url(../images/slider/slide-7-fs.jpg);
+	background-image: url('/images/slider/slide-7-fs.jpg');
 }
 .fullscreen-bkg-3{
-	background-image: url(../images/slider/slide-4-fs.jpg);
+	background-image: url('/images/slider/slide-4-fs.jpg');
 }
 .fullscreen-bkg-4{
-	background-image: url(../images/slider/slide-5-fs.jpg);
+	background-image: url('/images/slider/slide-5-fs.jpg');
 }
 
 /*------------------------------------------------------------------
@@ -1959,7 +1959,7 @@ body,
 
 /* Hero */
 .hero-2-1{
-	background-image: url(../images/team/hero-1.jpg);
+	background-image: url('/images/team/hero-1.jpg');
 }
 
 
@@ -1968,13 +1968,13 @@ body,
 */
 
 .hero-3-1{
-	background-image: url(../images/services/hero-1.jpg);
+	background-image: url('/images/services/hero-1.jpg');
 }
 .hero-4-1{
-	background-image: url(../images/services/hero-2.jpg);
+	background-image: url('/images/services/hero-2.jpg');
 }
 .hero-5-3 .media-column{
-	background-image: url(../images/services/hero-half-1.jpg);
+	background-image: url('/images/services/hero-half-1.jpg');
 }
 
 /*------------------------------------------------------------------
@@ -1983,7 +1983,7 @@ body,
 
 /* Hero Sections */
 .hero-5-contact-1 .media-column{
-	background-image: url(../images/contact/hero-half.jpg);
+	background-image: url('/images/contact/hero-half.jpg');
 }
 .hero-5-contact-1 [class*="stats-"] .stat-inner{
 	text-align: left;
@@ -2077,7 +2077,7 @@ h3.project-title{
 
 /* Hero */
 .hero-5-4 .media-column{
-	background-image: url(../images/portfolio/projects/hero-half-1.jpg);
+	background-image: url('/images/portfolio/projects/hero-half-1.jpg');
 }
 
 /* Folio Filter */
@@ -3704,7 +3704,7 @@ blockquote.border{
 	box-shadow: 0rem 0rem 1.8rem rgba(0,0,0,.2);
 }
 .pricing-table-column.callout.with-background-image{
-	background-image: url(../images/generic/pricing-table.jpg);
+	background-image: url('/images/generic/pricing-table.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -3778,67 +3778,67 @@ only screen and (				min-resolution: 2dppx) {
 
 	/* Intro Sections */
 	.intro-title-2{
-		background-image: url(../images/slider/slide-2-page-intro@2x.jpg);	
+		background-image: url('/images/slider/slide-2-page-intro@2x.jpg');	
 	}
 	.intro-title-2-1{
-		background-image: url(../images/slider/slide-8-page-intro@2x.jpg);	
+		background-image: url('/images/slider/slide-8-page-intro@2x.jpg');	
 	}
 	.intro-title-2-2{
-		background-image: url(../images/slider/slide-9-page-intro@2x.jpg);	
+		background-image: url('/images/slider/slide-9-page-intro@2x.jpg');	
 	}
 	.intro-title-2-3{
-		background-image: url(../images/slider/slide-11-page-intro@2x.jpg);	
+		background-image: url('/images/slider/slide-11-page-intro@2x.jpg');	
 	}
 	.intro-title-2-4{
-		background-image: url(../images/slider/slide-13-page-intro@2x.jpg);
+		background-image: url('/images/slider/slide-13-page-intro@2x.jpg');
 	}
 
 	/* Fullscreen Sections */
 	.fullscreen-bkg-2{
-		background-image: url(../images/slider/slide-7-fs@2x.jpg);
+		background-image: url('/images/slider/slide-7-fs@2x.jpg');
 	}
 	.fullscreen-bkg-3{
-		background-image: url(../images/slider/slide-4-fs@2x.jpg);
+		background-image: url('/images/slider/slide-4-fs@2x.jpg');
 	}
 	.fullscreen-bkg-4{
-		background-image: url(../images/slider/slide-5-fs@2x.jpg);
+		background-image: url('/images/slider/slide-5-fs@2x.jpg');
 	}
 
 	/* Stat Sections */
 	.stats-1-1{
-		background-image: url(../images/generic/hero-1@2x.jpg);
+		background-image: url('/images/generic/hero-1@2x.jpg');
 	}
 
 	/* Hero Sections */
 	.hero-2-1{
-		background-image: url(../images/team/hero-1@2x.jpg);
+		background-image: url('/images/team/hero-1@2x.jpg');
 	}
 	.hero-3-1{
-		background-image: url(../images/services/hero-1@2x.jpg);
+		background-image: url('/images/services/hero-1@2x.jpg');
 	}
 	.hero-4-1{
-		background-image: url(../images/services/hero-2@2x.jpg);
+		background-image: url('/images/services/hero-2@2x.jpg');
 	}
 	.hero-5-1 .media-column{
-		background-image: url(../images/generic/hero-half-1@2x.jpg);
+		background-image: url('/images/generic/hero-half-1@2x.jpg');
 	}
 	.hero-5-2 .media-column{
-		background-image: url(../images/team/hero-half-2@2x.jpg);
+		background-image: url('/images/team/hero-half-2@2x.jpg');
 	}
 	.hero-5-3 .media-column{
-		background-image: url(../images/services/hero-half-1@2x.jpg);
+		background-image: url('/images/services/hero-half-1@2x.jpg');
 	}
 	.hero-5-4 .media-column{
-		background-image: url(../images/portfolio/projects/hero-half-1@2x.jpg);
+		background-image: url('/images/portfolio/projects/hero-half-1@2x.jpg');
 	}
 
 	/* Call to Action Sections */
 	.call-to-action-2-1{
-		background-image: url(../images/generic/call-to-action-1@2x.jpg);
+		background-image: url('/images/generic/call-to-action-1@2x.jpg');
 	}
 
 	/* Signup */
 	.signup-2-1{
-		background-image: url(../images/generic/signup-1@2x.jpg);
+		background-image: url('/images/generic/signup-1@2x.jpg');
 	}
 }

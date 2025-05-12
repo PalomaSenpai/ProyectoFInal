@@ -1,0 +1,13 @@
+.img-adjust {
+  width: auto;
+  height: 30em; /* Ajusta la altura según lo necesites */
+  overflow: hidden;
+  position: relative;
+}
+
+.img-adjust img {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  top: 0;
+}

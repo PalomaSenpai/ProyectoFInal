@@ -23,7 +23,7 @@ export default function Home() {
 										</div>
 									</div>
 								</div>
-								<img data-src="images/design-agency/slider/slide-1-fs.jpg" data-retina src="images/blank.png" alt=""/>
+								<img data-src="images/chocoport/beach.png" data-retina src="images/blank.png" alt=""/>
 							</li>
 							<li className="tms-slide" data-image data-as-bkg-image data-force-fit data-overlay-bkg-color="#15130f" data-overlay-bkg-opacity="0.3" data-animation="scaleIn">
 								<div className="tms-content">
@@ -44,29 +44,7 @@ export default function Home() {
 										</div>
 									</div>
 								</div>
-								<img data-src="images/design-agency/slider/slide-2-fs.jpg" data-retina src="images/blank.png" alt=""/>
-							</li>
-							<li className="tms-slide" data-image data-as-bkg-image data-force-fit data-overlay-bkg-color="#15130f" data-overlay-bkg-opacity="0.3" data-animation="slideLeftRight">
-								<div className="tms-content">
-									<div className="tms-content-inner center v-align-middle">
-										<div className="row">
-											<div className="column width-12">
-												<h1 className="color-white text-uppercase lspacing-small weight-bold">
-													<span className="tms-caption" data-no-scale data-animate-in="preset:slideInDownShort;duration:800ms;">Weird&nbsp;</span>
-													<span className="tms-caption" data-no-scale data-animate-in="preset:slideInUpShort;duration:800ms;delay:700ms;">I&nbsp;</span>
-													<span className="tms-caption" data-no-scale data-animate-in="preset:slideInUpShort;duration:800ms;delay:500ms;">Am&nbsp;</span>
-												</h1>
-												<div className="clear"></div>
-												<div className="tms-caption"
-													 data-no-scale
-													 data-animate-in="preset:slideInLeftShort;duration:800ms;delay:900ms;">
-													<a href="#" className="button medium text-uppercase border-white bkg-hover-theme color-white color-hover-white">View Case Study</a> 
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<img data-src="images/design-agency/slider/slide-3-fs.jpg" data-retina src="images/blank.png" alt=""/>
+								<img data-src="images/chocoport/people_walking.png" data-retina src="images/blank.png" alt=""/>
 							</li>
 						</ul>
 					</div>
@@ -106,20 +84,126 @@ export default function Home() {
           </div>
         </div>
 
+        <div id="getting-started" className="section-block feature-column-group no-padding">
+          <div className="row full-width collapse flex">
+						<div className="column width-12">      
+              <div className="column width-2">
+                <h3 className="mb-50">Busca tu vuelo</h3>
+              </div>
+
+            </div>
+          </div>
+        </div>
 
 
-        <section className="section-block hero-5 hero-5-1 clear-height show-media-column-on-mobile bkg-theme">
+        <div className="section-block replicable-content bkg-grey-ultralight">
+          <div className="row">
+						<div className="column width-12">     
+              <div className="column width-2">
+                <h3 className="mb-50">Busca tu vuelo</h3>
+              </div>
+              <form>
+                <div className="column width-2">Origen
+                  <div className="form-select form-element large">
+                    <select
+                      name="budget"
+                      tabindex="6"
+                      className="form-aux"
+                      data-label="origen"
+                    >
+                      <option selected="selected" value="origen">
+                        Origen
+                      </option>
+                      <option value="">$500-$1000</option>
+                      <option value="">$1000-$2000</option>
+                      <option value="">$2000-$3500</option>
+                      <option value="">$5000+</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="column width-2">Destino
+                  <div className="form-select form-element large">
+                    <select
+                      name="budget"
+                      tabindex="6"
+                      className="form-aux"
+                      data-label="Destino"
+                    >
+                      <option selected="selected" value="Destino">
+                        Destino
+                      </option>
+                      <option value="">$500-$1000</option>
+                      <option value="">$1000-$2000</option>
+                      <option value="">$2000-$3500</option>
+                      <option value="">$5000+</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="column width-2">
+                  <div className="field-wrapper">Salida
+                    <input
+                      type="date"
+                      name="date"
+                      className="form-aux form-date form-element large"
+                      placeholder="Day/Month/Year"
+                      tabindex="5"
+                    />
+                  </div>
+                </div>
+                <div className="column width-2">Rango
+                  <div className="form-select form-element large">
+                    <select
+                      name="budget"
+                      tabindex="6"
+                      className="form-aux"
+                      data-label="Rango"
+                    >
+                      <option selected="selected" value="Rango">
+                        Rango
+                      </option>
+                      <option value="">$500-$1000</option>
+                      <option value="">$1000-$2000</option>
+                      <option value="">$2000-$3500</option>
+                      <option value="">$5000+</option>
+                    </select>
+                  </div>
+                </div>&nbsp;
+                <div class="column width-2">&nbsp;
+                  <input
+                    type="submit"
+                    value="Send Email"
+                    className="button bkg-purple  medium border-hover-purple color-white color-hover-purple "
+                  />
+                </div>
+
+                
+              </form>
+
+            </div>
+          </div>
+        </div>
+        <div className="section-block grid-container fade-in-progressively full-width no-margins no-padding" data-layout-mode="masonry" data-grid-ratio="0" data-animate-filter-duration="700" data-set-dimensions data-animate-resize data-animate-resize-duration="0.8">
+					<div className="row">
+						<div className="column width-12">
+							<div className="row grid content-grid-4">
+								<Cards/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+        <section className="section-block hero-5 hero-5-1 clear-height show-media-column-on-mobile bkg-purple">
 					<div className="media-column width-6 horizon" data-animate-in="preset:slideInLeftShort;duration:1000ms;delay:100ms;" data-threshold="0.5"></div>
 					<div className="row">
 						<div className="column width-5 push-7">
 							<div className="hero-content split-hero-content">
 								<div className="hero-content-inner center-on-mobile horizon" data-animate-in="preset:fadeIn;duration:1300ms;" data-threshold="0.5">
 									<div className="color-white">
-										<h2 className="mb-30">User Stories</h2>
-										<p className="lead">Just pack your bags and live an experience you'll never forget.</p>
+										<h2 className="mb-30">¡Únete Hoy y Comienza tu Viaje!</h2>
+										<p className="lead">Regístrate y descubre lo que el mundo tiene para ti.</p>
 									</div>
-									<p className="color-white opacity-06">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-									<a href="#featured-trips" data-offset="-60" className="button scroll-link medium border-white bkg-hover-charcoal color-white color-hover-white text-uppercase">See Featured Trips</a>
+									<p className="color-white opacity-06">Viajar es abrir la mente y el corazón a lo desconocido. Es descubrir paisajes que cortan la respiración, sabores que despiertan los sentidos y culturas que transforman nuestra forma de ver el mundo. </p>
+									<a href="#featured-trips" data-offset="-60" className="button scroll-link medium border-white bkg-hover-charcoal color-white color-hover-white text-uppercase">Registrarse ahora</a>
 								</div>
 							</div>
 						</div>
@@ -134,11 +218,10 @@ export default function Home() {
 								<div className="hero-content-inner left center-on-mobile horizon" data-animate-in="preset:fadeIn;duration:1300ms;" data-threshold="0.5">
 									<blockquote className="left large quote">
 										<span className="icon-quote"></span>
-										<p>Best travel expierience I've ever had. Wanted something unique and I got exactly that. Excellent!</p>
-										<cite>John K. Riley</cite>
+										<p>¿Tienes dudas antes de viajar? Estamos aquí para ayudarte a resolverlas y que vivas tu experiencia con total tranquilidad.</p>
 									</blockquote>
-									<p className="color-grey">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-									<a href="#featured-trips" data-offset="-60" className="button scroll-link medium bkg-theme border-hover-theme color-white color-hover-theme text-uppercase">See Featured Trips</a>
+									<p className="color-grey">Consulta nuestras preguntas frecuentes para obtener respuestas rápidas sobre reservas, pagos, políticas de equipaje y más. Queremos que tu único plan sea disfrutar el viaje.</p>
+									<a href="#featured-trips" data-offset="-60" className="button scroll-link medium bkg-blue border-hover-blue color-white color-hover-blue text-uppercase">Ver Preguntas Frecuentes</a>
 								</div>
 							</div>
 						</div>
@@ -147,4 +230,165 @@ export default function Home() {
     </Layout>
     
   );
+}
+
+
+function Cards(){
+  return(
+    <>
+    <div className="grid-item development">
+									<div className="thumbnail overlay-fade-out" data-hover-easing="easeInOut" data-hover-speed="500" data-hover-bkg-color="#ffffff" data-hover-bkg-opacity=".3">
+										<a className="overlay-link lightbox-link" data-group="project-7" data-caption="Banana Republik" data-image-url="http://sartre.thememountain.com/images/design-agency/portfolio/grid/no-margins/project-7-square.jpg" href="images/design-agency/portfolio/grid/no-margins/project-7-square.jpg" data-lightbox-animation="slideInBottom">
+											<div className="img-adjust">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg" alt=""/>
+											</div>
+                      <span className="overlay-info">
+												<span>
+													<span>
+														<div className="bkg-white">
+                              <span className="project-title">The Adventure</span>
+															<span className="project-description">identity/illustration</span>
+														</div>
+													</span>
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+								<div className="grid-item grid-sizer design">
+									<div className="thumbnail overlay-fade-out" data-hover-easing="easeInOut" data-hover-speed="500" data-hover-bkg-color="#ffffff" data-hover-bkg-opacity=".3">
+										<a className="overlay-link lightbox-link" data-group="project-1" data-caption="The Adventure" data-image-url="http://sartre.thememountain.com/images/design-agency/portfolio/grid/no-margins/project-1-square.jpg" href="images/design-agency/portfolio/grid/no-margins/project-1-square.jpg" data-lightbox-animation="slideInBottom">
+											<div className="img-adjust">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/St_Georges_Grenada_Fort_-_panoramio.jpg" alt=""/>
+											</div>
+                      <span className="overlay-info center">
+												<span>
+													<span>
+														<div className="bkg-white" >
+                            	<span className="project-title">The Adventure</span>
+															<span className="project-description">identity/illustration</span>
+														</div>
+													</span>
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+								<div className="grid-item illutration">
+									<div className="thumbnail overlay-fade-out" data-hover-easing="easeInOut" data-hover-speed="500" data-hover-bkg-color="#ffffff" data-hover-bkg-opacity=".3">
+										<a className="overlay-link lightbox-link" data-group="project-2" data-caption="I Travel - The Travel App" data-image-url="http://sartre.thememountain.com/images/design-agency/portfolio/grid/no-margins/project-2-square.jpg" href="images/design-agency/portfolio/grid/no-margins/project-2-square.jpg" data-lightbox-animation="slideInBottom">
+											<div className="img-adjust">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/London_Skyline_%28125508655%29.jpeg" alt=""/>
+											</div>
+                      <span className="overlay-info">
+												<span>
+													<span>
+														<div className="bkg-white">
+															<span className="project-title">I Travel</span>
+															<span className="project-description">iOS app</span>
+														</div>
+													</span>
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+								<div className="grid-item design illustration">
+									<div className="thumbnail overlay-fade-out" data-hover-easing="easeInOut" data-hover-speed="500" data-hover-bkg-color="#ffffff" data-hover-bkg-opacity=".3">
+										<a className="overlay-link lightbox-link" data-group="project-3" data-caption="Miller Jackson Clothing" data-image-url="http://sartre.thememountain.com/images/design-agency/portfolio/grid/no-margins/project-3-square.jpg" href="images/design-agency/portfolio/grid/no-margins/project-3-square.jpg" data-lightbox-animation="slideInBottom">
+											<div className="img-adjust">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg" alt=""/>
+											</div>
+                      <span className="overlay-info">
+												<span>
+													<span>
+														<div className="bkg-white">
+															<span className="project-title">Miller Jackson</span>
+															<span className="project-description">identity</span>
+														</div>
+													</span>
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+								<div className="grid-item illustration">
+									<div className="thumbnail overlay-fade-out" data-hover-easing="easeInOut" data-hover-speed="500" data-hover-bkg-color="#ffffff" data-hover-bkg-opacity=".3">
+										<a className="overlay-link lightbox-link" data-group="project-4" data-caption="Rockabilly - Barber New York City" data-image-url="http://sartre.thememountain.com/images/design-agency/portfolio/grid/no-margins/project-4-square.jpg" href="images/design-agency/portfolio/grid/no-margins/project-4-square.jpg" data-lightbox-animation="slideInBottom">
+											<div className="img-adjust">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Skyscrapers_of_Shinjuku_2009_January.jpg" alt=""/>
+											</div>
+                      <span className="overlay-info">
+												<span>
+													<span>
+														<div className="bkg-white">
+															<span className="project-title">Rockabilly</span>
+															<span className="project-description">identity</span>
+														</div>
+													</span>
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+								<div className="grid-item design">
+									<div className="thumbnail overlay-fade-out" data-hover-easing="easeInOut" data-hover-speed="500" data-hover-bkg-color="#ffffff" data-hover-bkg-opacity=".3">
+										<a className="overlay-link lightbox-link" data-group="project-5" data-caption="Bstrd Clothing Company" data-image-url="http://sartre.thememountain.com/images/design-agency/portfolio/grid/no-margins/project-5-square.jpg" href="images/design-agency/portfolio/grid/no-margins/project-5-square.jpg" data-lightbox-animation="slideInBottom">
+											<div className="img-adjust">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Hollywood_Sign_%28Zuschnitt%29.jpg" alt=""/>
+											</div>
+                      <span className="overlay-info">
+												<span>
+													<span>
+														<div className="bkg-white">
+															<span className="project-title">BSTRDS</span>
+															<span className="project-description">illustration</span>
+														</div>
+													</span>
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+								<div className="grid-item development">
+									<div className="thumbnail overlay-fade-out" data-hover-easing="easeInOut" data-hover-speed="500" data-hover-bkg-color="#ffffff" data-hover-bkg-opacity=".3">
+										<a className="overlay-link lightbox-link" data-group="project-6" data-caption="Weird I Am - Clothing" data-image-url="http://sartre.thememountain.com/images/design-agency/portfolio/grid/no-margins/project-6-square.jpg" href="images/design-agency/portfolio/grid/no-margins/project-6-square.jpg" data-lightbox-animation="slideInBottom">
+											<div className="img-adjust">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Aerial_view_of_Barcelona%2C_Spain_%2851227309370%29_%28cropped%29.jpg" alt=""/>
+											</div>
+                      <span className="overlay-info">
+												<span>
+													<span>
+														<div className="bkg-white">
+															<span className="project-title">Weird I Am</span>
+															<span className="project-description">identity</span>
+														</div>
+													</span>
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+								<div className="grid-item illustration">
+									<div className="thumbnail overlay-fade-out" data-hover-easing="easeInOut" data-hover-speed="500" data-hover-bkg-color="#ffffff" data-hover-bkg-opacity=".3">
+										<a className="overlay-link lightbox-link" data-group="project-8" data-caption="Epic Logo Swiss Made" data-image-url="http://sartre.thememountain.com/images/design-agency/portfolio/grid/no-margins/project-8-square.jpg" href="images/design-agency/portfolio/grid/no-margins/project-8-square.jpg" data-lightbox-animation="slideInBottom">
+											<div className="img-adjust">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Sobrevuelos_CDMX_HJ2A4913_%2825514321687%29_%28cropped%29.jpg" alt=""/>
+											</div>
+                      <span className="overlay-info">
+												<span>
+													<span>
+														<div className="bkg-white">
+															<span className="project-title">Epic</span>
+															<span className="project-description">identity</span>
+														</div>
+													</span>
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+    
+    </>
+  )
 }

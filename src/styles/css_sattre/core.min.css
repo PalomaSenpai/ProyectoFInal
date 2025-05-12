@@ -1461,7 +1461,7 @@ a.overlay-info:hover {
 .overlay-fade-img-scale-in:hover .overlay-info,
 .overlay-fade-img-scale-out:hover .overlay-info,
 .overlay-fade-out:hover .overlay-info {
-  opacity: 0;
+  opacity: 0.5;
 }
 .overlay-slide-in-top .overlay-info {
   opacity: 0;
