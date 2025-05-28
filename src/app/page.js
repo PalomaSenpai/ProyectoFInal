@@ -1,6 +1,12 @@
-import Layout from "../../src/components/invitado.main.layout";
+"use client";
 
+import Layout from "../../src/components/invitado.main.layout";
+import Link from 'next/link';
+import { useState } from 'react';
 export default function Home() {
+	const [valor, setValor] = useState('origen');
+
+
   return (
     <Layout>
       	<section className="section-block featured-media window-height tm-slider-parallax-container">
@@ -83,19 +89,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        <div id="getting-started" className="section-block feature-column-group no-padding">
-          <div className="row full-width collapse flex">
-						<div className="column width-12">      
-              <div className="column width-2">
-                <h3 className="mb-50">Busca tu vuelo</h3>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-
         <div className="section-block replicable-content bkg-grey-ultralight">
           <div className="row">
 						<div className="column width-12">     
@@ -105,13 +98,16 @@ export default function Home() {
               <form>
                 <div className="column width-2">Origen
                   <div className="form-select form-element large">
-                    <select
-                      name="budget"
-                      tabindex="6"
-                      className="form-aux"
-                      data-label="origen"
-                    >
-                      <option selected="selected" value="origen">
+				  <select
+					name="budget"
+					tabIndex="6"
+					className="form-aux"
+					data-label="origen"
+					value={valor}
+					onChange={(e) => setValor(e.target.value)}
+					>
+						
+                      <option value="origen">
                         Origen
                       </option>
                       <option value="">$500-$1000</option>
@@ -125,11 +121,11 @@ export default function Home() {
                   <div className="form-select form-element large">
                     <select
                       name="budget"
-                      tabindex="6"
+                      tabIndex="6"
                       className="form-aux"
                       data-label="Destino"
                     >
-                      <option selected="selected" value="Destino">
+                      <option  value="Destino">
                         Destino
                       </option>
                       <option value="">$500-$1000</option>
@@ -146,7 +142,7 @@ export default function Home() {
                       name="date"
                       className="form-aux form-date form-element large"
                       placeholder="Day/Month/Year"
-                      tabindex="5"
+                      tabIndex="5"
                     />
                   </div>
                 </div>
@@ -154,11 +150,11 @@ export default function Home() {
                   <div className="form-select form-element large">
                     <select
                       name="budget"
-                      tabindex="6"
+                      tabIndex="6"
                       className="form-aux"
                       data-label="Rango"
                     >
-                      <option selected="selected" value="Rango">
+                      <option  value="Rango">
                         Rango
                       </option>
                       <option value="">$500-$1000</option>
@@ -168,7 +164,7 @@ export default function Home() {
                     </select>
                   </div>
                 </div>&nbsp;
-                <div class="column width-2">&nbsp;
+                <div className="column width-2">&nbsp;
                   <input
                     type="submit"
                     value="Send Email"
@@ -203,7 +199,7 @@ export default function Home() {
 										<p className="lead">Regístrate y descubre lo que el mundo tiene para ti.</p>
 									</div>
 									<p className="color-white opacity-06">Viajar es abrir la mente y el corazón a lo desconocido. Es descubrir paisajes que cortan la respiración, sabores que despiertan los sentidos y culturas que transforman nuestra forma de ver el mundo. </p>
-									<a href="#featured-trips" data-offset="-60" className="button scroll-link medium border-white bkg-hover-charcoal color-white color-hover-white text-uppercase">Registrarse ahora</a>
+									<Link href="/register" className="button scroll-link medium border-white bkg-hover-charcoal color-white color-hover-white text-uppercase">Registrarse ahora</Link>
 								</div>
 							</div>
 						</div>
@@ -217,11 +213,10 @@ export default function Home() {
 							<div className="hero-content split-hero-content">
 								<div className="hero-content-inner left center-on-mobile horizon" data-animate-in="preset:fadeIn;duration:1300ms;" data-threshold="0.5">
 									<blockquote className="left large quote">
-										<span className="icon-quote"></span>
 										<p>¿Tienes dudas antes de viajar? Estamos aquí para ayudarte a resolverlas y que vivas tu experiencia con total tranquilidad.</p>
 									</blockquote>
 									<p className="color-grey">Consulta nuestras preguntas frecuentes para obtener respuestas rápidas sobre reservas, pagos, políticas de equipaje y más. Queremos que tu único plan sea disfrutar el viaje.</p>
-									<a href="#featured-trips" data-offset="-60" className="button scroll-link medium bkg-blue border-hover-blue color-white color-hover-blue text-uppercase">Ver Preguntas Frecuentes</a>
+									<Link href="/fqa" className="button scroll-link medium bkg-blue border-hover-blue color-white color-hover-blue text-uppercase">Ver Preguntas Frecuentes</Link>
 								</div>
 							</div>
 						</div>
