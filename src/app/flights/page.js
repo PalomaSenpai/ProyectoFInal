@@ -15,7 +15,7 @@ export default function Home() {
   useEffect(() => {
     const fetchFlights = async () => {
       try {
-        const response = await fetch('http://localhost:3050/flights'); // Ajusta si tu backend tiene otro puerto
+        const response = await fetch('https://chocoportback.onrender.com/flights'); // Ajusta si tu backend tiene otro puerto
         const data = await response.json();
         setFlights(data.data); // data.data porque el backend devuelve { data: [...] }
       } catch (error) {
