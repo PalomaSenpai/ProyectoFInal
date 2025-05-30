@@ -22,6 +22,9 @@ export default function Navbar() {
       <li>
         <Link href="/login">Inicia Sesión</Link>
       </li>
+      <li>
+			<a href="cart.html">Cart</a>
+		</li>
     </ul>
   )
 }
