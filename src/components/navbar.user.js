@@ -1,27 +1,27 @@
-export default function Navbar(){
-    return (
-        <>
-        <ul>
-        <li className="current ">
-            <a href="index.html">Home</a>
-        </li>
-        <li className="">
-            <a href="about-style-one.html">Vuelos</a>
-        </li>
-        <li className="">
-            <a href="portfolio-three-columns.html">Preguntas frecuentes</a>
-        </li>
-        <li className="">
-            <a href="blog.html">Contactanos</a>
-        </li>
-        <li className="">
-            <a href="shop-grid.html">Registrarse</a>
-        </li>
-        <li className="">
-            <a href="elements-accordions.html">Inicia Sesion</a>
-        </li>
+'use client'
+import Link from 'next/link'
+
+export default function Navbar() {
+  return (
+    <ul>
+      <li className="current">
+        <Link href="/">Home</Link>
+      </li>
+      <li>
+        <Link href="/flights">Vuelos</Link>
+      </li>
+      <li>
+        <Link href="/faq">Preguntas frecuentes</Link>
+      </li>
+      <li>
+        <Link href="/contact">Contáctanos</Link>
+      </li>
+      <li>
+        <Link href="/register">Registrarse</Link>
+      </li>
+      <li>
+        <Link href="/login">Inicia Sesión</Link>
+      </li>
     </ul>
-        
-        </>
-    )
-};
+  )
+}

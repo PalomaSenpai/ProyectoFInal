@@ -1,3 +1,4 @@
+'use client';
 import '@/styles/css_sattre/core.min.css';
 import '@/styles/css_sattre/skin-design-agency.css';
 import TopNavBar from "@/components/navbar.user.top";
@@ -7,7 +8,43 @@ import Footer from "@/components/user.footer";
 import Link from 'next/link';
 import Head from "next/head";
 import Script from 'next/script';
+import {useState} from "react";
+import {useRouter} from "next/navigation";
+
 export default function Home() {
+  const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setErrorMsg(""); // limpiar errores previos
+
+    try {
+      const res = await fetch("http://localhost:3050/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (res.ok) {
+        // Login exitoso
+        const data = await res.json();
+        // Aquí puedes redireccionar a otra página, por ejemplo:
+        router.push("/");
+      } else {
+        // Error de login
+        const errorData = await res.json();
+        setErrorMsg(errorData.error || "Error al iniciar sesión");
+      }
+    } catch (error) {
+      setErrorMsg("Error de conexión");
+    }
+  };
+
   return (
 	<>
 
@@ -54,40 +91,46 @@ export default function Home() {
 							<div className="hero-content split-hero-content">
 								<div className="hero-content-inner left horizon" data-animate-in="preset:slideInLeftShort;duration:1000ms;" data-threshold="0.5">
 									<h2 className="mb-30">Inicia Sesión</h2>
-									<form>
-										
-										<div className="column width-12">
-											<div className="field-wrapper">
-											<input
-												type="email"
-												name="email"
-												className="form-email form-element large"
-												placeholder="Correo*"
-												tabIndex="3"
-												required
-											/>
+										<form onSubmit={handleSubmit}>
+											<div className="column width-12">
+												<div className="field-wrapper">
+													<input
+													type="email"
+													name="email"
+													className="form-email form-element large"
+													placeholder="Correo*"
+													tabIndex="3"
+													required
+													value={email}
+													onChange={(e) => setEmail(e.target.value)}
+													/>
+												</div>
 											</div>
-										</div>
-										<div className="column width-12">
-											<div className="field-wrapper">
-											<input
-												type="password"
-												name="password"
-												className="form-password form-element large"
-												placeholder="Constraseña*"
-												tabIndex="3"
-												required
-											/>
+											<div className="column width-12">
+												<div className="field-wrapper">
+													<input
+													type="password"
+													name="password"
+													className="form-password form-element large"
+													placeholder="Contraseña*"
+													tabIndex="3"
+													required
+													value={password}
+													onChange={(e) => setPassword(e.target.value)}
+													/>
+												</div>
 											</div>
-										</div>
-										<div className="column width-12">
-											<input
-											type="submit"
-											value="Enviar"
-											className="button  medium bkg-blue border-hover-blue color-white color-hover-blue "
-											/>
-										</div>
-									</form>
+											{errorMsg && (
+											<div style={{ color: "red", marginBottom: "10px" }}>{errorMsg}</div>
+											)}
+											<div className="column width-12">
+												<input
+													type="submit"
+													value="Enviar"
+													className="button medium bkg-blue border-hover-blue color-white color-hover-blue"
+												/>
+											</div>
+									 	</form>
 									
 								</div>
 							</div>

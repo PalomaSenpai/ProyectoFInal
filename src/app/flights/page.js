@@ -4,7 +4,7 @@ import Script from 'next/script';
 import Link from 'next/link';
 import '@/styles/css_sattre/core.min.css';
 import '@/styles/css_sattre/skin.css';
-
+import Footer from "@/components/user.footer";
 import TopNavBar from "@/components/navbar.user.top";
 import Navbar from "@/components/navbar.user";
 
