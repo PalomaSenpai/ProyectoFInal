@@ -20,7 +20,7 @@ export default function Home() {
     gender: form.gender.value,
     RFC: form.RFC.value,
     email: form.email.value,
-    passwordHash: form.passwordHash.value,
+    password: form.password.value,
     contact: {
       phone: form.phone.value
     },
@@ -34,7 +34,7 @@ export default function Home() {
   };
 
     try {
-      const res = await fetch("http://localhost:3050/register", {
+      const res = await fetch("https://chocoportback.onrender.com/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(dataToSend),
@@ -363,7 +363,7 @@ export default function Home() {
 									<div className="field-wrapper">
 										<input
 										type="password"
-										name="passwordHash"
+										name="password"
 										className="form-element large"
 										placeholder="Contraseña*"
 										required
