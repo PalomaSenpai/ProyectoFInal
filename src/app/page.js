@@ -5,7 +5,46 @@ import Link from 'next/link';
 import { useState } from 'react';
 export default function Home() {
 	const [valor, setValor] = useState('origen');
+  // Aquí puedes definir el estado inicial de los campos del formulario si es necesario
+  
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+
+  const dataToSend = {
+    firstName: form.firstName.value,
+    lastName: form.lastName.value,
+    birthDate: form.birthDate.value,
+    gender: form.gender.value,
+    RFC: form.RFC.value,
+    email: form.email.value,
+    passwordHash: form.passwordHash.value,
+    contact: {
+      phone: form.phone.value
+    },
+    address: {
+      street: form.street.value,
+      city: form.city.value,
+      state: form.state.value,
+      country: form.country.value,
+      zipCode: form.zipCode.value
+    }
+  };
+
+    try {
+      const res = await fetch("http://localhost:3050/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dataToSend),
+      });
+
+      
+    } catch (err) {
+      
+    }
+  };
 
   return (
     <Layout>
@@ -207,7 +246,7 @@ export default function Home() {
 				</section>
 
         <div className="section-block hero-5 hero-5-2 clear-height right show-media-column-on-mobile bkg-white">
-					<div className="media-column width-6 horizon" data-animate-in="preset:slideInRightShort;duration:1000ms;delay:100ms;" data-threshold="0.5"></div>
+				<div className="media-column width-6 horizon" data-animate-in="preset:slideInRightShort;duration:1000ms;delay:100ms;" data-threshold="0.5"></div>
 					<div className="row">
 						<div className="column width-5">
 							<div className="hero-content split-hero-content">
@@ -222,6 +261,198 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
+				<div className="content clearfix">
+
+				<div className="section-block intro-title-2">
+					<div className="row">
+						<div className="column width-12 center">
+							<div className="title-container">
+								<div className="title-container-inner color-white">
+									<h1 className="title-large mb-30">Registro</h1>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className="section-block pb-0">
+					<div className="row">
+						<div className="column width-10 offset-1 center">
+							<p className="lead weight-regular mb-70">Regístrate y comienza a planear tu viaje con nosotros. Tendrás acceso a ofertas exclusivas, recordatorios personalizados y una experiencia más rápida en cada paso. ¡Tu próxima aventura empieza aquí!</p>
+						</div>
+						<div className="column width-12">
+							<hr className="mb-70"/>
+						</div>
+					</div>
+				</div>
+				<div class="section-block replicable-content bkg-grey-ultralight">
+            		<div class="row">
+						<div class="column width-12">
+							<p className="lead weight-semi-bold mb-50">¡Regístrate ya!</p>
+
+							<form onSubmit={handleSubmit}>
+								<div className="row">
+									<div className="column width-6">
+									<div className="field-wrapper">
+										<input
+										type="text"
+										name="firstName"
+										className="form-element large"
+										placeholder="Nombre*"
+										required
+										/>
+									</div>
+									</div>
+									<div className="column width-6">
+									<div className="field-wrapper">
+										<input
+										type="text"
+										name="lastName"
+										className="form-element large"
+										placeholder="Apellido(s)*"
+										required
+										/>
+									</div>
+									</div>
+									<div className="column width-6">
+									<div className="field-wrapper">
+										<input
+										type="date"
+										name="birthDate"
+										className="form-element large"
+										placeholder="Fecha de nacimiento*"
+										required
+										/>
+									</div>
+									</div>
+									<div className="column width-6">
+									<div className="field-wrapper">
+										<select
+										name="gender"
+										className="form-element large"
+										required
+										>
+										<option value="">Sexo*</option>
+										<option value="male">Masculino</option>
+										<option value="female">Femenino</option>
+										</select>
+									</div>
+									</div>
+									<div className="column width-6">
+									<div className="field-wrapper">
+										<input
+										type="text"
+										name="RFC"
+										className="form-element large"
+										placeholder="RFC*"
+										required
+										/>
+									</div>
+									</div>
+									<div className="column width-6">
+									<div className="field-wrapper">
+										<input
+										type="email"
+										name="email"
+										className="form-element large"
+										placeholder="Correo electrónico*"
+										required
+										/>
+									</div>
+									</div>
+									<div className="column width-6">
+									<div className="field-wrapper">
+										<input
+										type="password"
+										name="passwordHash"
+										className="form-element large"
+										placeholder="Contraseña*"
+										required
+										/>
+									</div>
+									</div>
+									<div className="column width-6">
+									<div className="field-wrapper">
+										<input
+										type="text"
+										name="phone"
+										className="form-element large"
+										placeholder="Teléfono*"
+										required
+										/>
+									</div>
+									</div>
+									<div className="column width-6">
+									<div className="field-wrapper">
+										<input
+										type="text"
+										name="street"
+										className="form-element large"
+										placeholder="Calle*"
+										required
+										/>
+									</div>
+									</div>
+									<div className="column width-6">
+									<div className="field-wrapper">
+										<input
+										type="text"
+										name="city"
+										className="form-element large"
+										placeholder="Ciudad*"
+										required
+										/>
+									</div>
+									</div>
+									<div className="column width-6">
+									<div className="field-wrapper">
+										<input
+										type="text"
+										name="state"
+										className="form-element large"
+										placeholder="Estado*"
+										required
+										/>
+									</div>
+									</div>
+									<div className="column width-6">
+									<div className="field-wrapper">
+										<input
+										type="text"
+										name="country"
+										className="form-element large"
+										placeholder="País*"
+										required
+										/>
+									</div>
+									</div>
+									<div className="column width-6">
+									<div className="field-wrapper">
+										<input
+										type="text"
+										name="zipCode"
+										className="form-element large"
+										placeholder="Código Postal*"
+										required
+										/>
+									</div>
+									</div>
+								</div>
+								<div className="column width-12">
+									<input
+									type="submit"
+									value="Registrarse"
+									className="form-submit button medium bkg-theme bkg-hover-theme color-white color-hover-white"
+									/>
+								</div>
+								</form>
+
+
+							
+							</div>
+						</div>
+					</div>
+				</div>
+			
     </Layout>
     
   );
